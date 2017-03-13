@@ -5,3 +5,6 @@ app = Flask(__name__)
 app.config.from_object('config')
 
 db = SQLAlchemy(app)
+
+from app.films.views import mod as filmsModule
+app.register_blueprint(filmsModule)

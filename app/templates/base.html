@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %} DVD Rental {% endblock %} </title>
+        {% block css %}
+        <link rel="stylesheet" href = "{{ url_for('static', filename = '/css/style.css') }} "/>
+        {% endblock %}
+        {% block script %}
+        {% endblock %}
+    </head>
+    <div class=page>
+        <h2> DVD Rental </h1>
+        <div class=metanav>
+        </div>
+        {% block body %}{% endblock %}
+    </div>
+</html>
