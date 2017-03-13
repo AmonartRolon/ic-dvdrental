@@ -19,7 +19,7 @@ class Film(db.Model):
     fulltext = db.Column(db.Text)
 
     def __init__(self, title, description, release_year, language_id,
-            rental_duration, rental_rate, length, replacement_cost, last_update):
+            rental_duration, rental_rate, length, replacement_cost):
         self.title = title
         self.description = description
         self.release_year = release_year
@@ -28,7 +28,6 @@ class Film(db.Model):
         self.rental_rate = rental_rate
         self.length = length
         self.replacement_cost = replacement_cost
-        self.last_update = last_update
 
     def __repr__(self):
         return "<Title: {0} Description: {1} \

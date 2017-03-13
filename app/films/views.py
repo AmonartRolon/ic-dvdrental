@@ -6,12 +6,12 @@ from app import db
 
 mod = Blueprint('films', __name__, url_prefix = '/films')
 
-@mod.route('/browse/')
+@mod.route('/browse')
 def browse():
     films = Film.query.all()
     return render_template('films/browse.html', films = films)
 
-@mod.route('/<id>/')
+@mod.route('/<id>')
 def films(id):
     film = Film.query.get(id)
     return render_template('films/film.html', film = film)
