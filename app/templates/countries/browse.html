@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+        {% for country in countries %}
+        <a href = "{{ url_for('countries.countries', id = country.country_id) }}" >{{ country.country }}</a> </br>
+        {% endfor %}
+{% endblock %}
