@@ -3,14 +3,20 @@
     <head>
         <title>{% block title %} DVD Rental {% endblock %} </title>
         {% block css %}
-        <link rel="stylesheet" href = "{{ url_for('static', filename = '/css/style.css') }} "/>
+        <link rel="stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }} "/>
         {% endblock %}
         {% block script %}
         {% endblock %}
     </head>
     <div class=page>
-        <h2> DVD Rental </h1>
         <div class=metanav>
+            <h1> DVD Rental </h1>
+            <ul>
+                <li><a href = " {{ url_for('app.index') }}">Home</a></li>
+                <li><a href = " {{ url_for('films.browse') }}">Films</a></li>
+                <li><a href = "#">Login</a></li>
+                <li><a href = "#">About</a></li>
+            </ul>
         </div>
         {% block body %}{% endblock %}
     </div>
