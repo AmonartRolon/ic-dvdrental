@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+        {% for city in cities %}
+        <a href = "{{ url_for('cities.cities', id = city.city_id) }}" >{{ city.city }}</a> </br>
+        {% endfor %}
+{% endblock %}

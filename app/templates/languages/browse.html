@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+        {% for language in languages %}
+        <a href = "{{ url_for('languages.languages', id = language.language_id) }}" >{{ language.name }}</a> </br>
+        {% endfor %}
+{% endblock %}

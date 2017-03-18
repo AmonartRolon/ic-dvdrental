@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+        {% for store in stores %}
+        <a href = "{{ url_for('stores.stores', id = store.store_id) }}" >{{ store.store_id }}</a> </br>
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block body %}
+        {% for actor in actors %}
+        <a href = "{{ url_for('actors.actors', id = actor.actor_id) }}" >{{ actor.last_name }}, {{ actor.first_name }}</a> </br>
+        {% endfor %}
+{% endblock %}
